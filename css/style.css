@@ -1,0 +1,144 @@
+* {
+  transition: 0.3s all ease-in-out;
+}
+.fluid-container {
+  max-width: 1000px;
+  margin: auto;
+}
+header {
+  background-image: url("../images/gradient.jpg");
+}
+
+.header-img {
+  margin-top: 3rem;
+}
+.breadcrumb-row {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+.breadcrumb-link {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+section.middle {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+}
+
+.middle main {
+  flex: 1 0 650px;
+}
+
+.middle nav {
+  flex: 1 0 320px;
+  margin-left: 22px;
+}
+.navbar-container {
+  border-width: 3px;
+  border-color: #e1e1e1;
+  border-style: double;
+  padding: 15px;
+  margin-bottom: 20px;
+  transition: 0.3s all ease-in-out;
+}
+nav a {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: normal;
+  color: #000;
+}
+nav ul li {
+  color: #e55e04;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+#nav-toggler {
+  display: none;
+  appearance: none;
+  width: 3rem;
+  height: 3rem;
+  background: url("../images/toggler.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.social-box {
+  display: flex;
+}
+.social-box img {
+  width: 4rem;
+  margin-right: 1.2rem;
+}
+footer {
+  background-color: #dbdbdb;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+.footer-row-last {
+  text-align: left;
+}
+footer a {
+  color: #000;
+}
+.footer-row-last{
+    display: flex;
+}
+.footer-row-last div{
+    flex:  1 0 0;
+}
+@media screen and (max-width: 1100px) {
+
+  .fluid-container {
+    max-width: 90%;
+  }
+  .middle main,
+  .middle nav {
+    margin-left: 0;
+    flex: 1 0 100%;
+  }
+  #nav-toggler {
+    display: block;
+    outline: none;
+  }
+  .navbar-container {
+    width: 0;
+    display: none;
+    height: 0;
+    opacity: 0;
+    padding: 0;
+    display: block;
+    padding-left: 8px;
+  }
+  .navbar-container *{
+      display: none;
+  }
+  #nav-toggler:checked ~ .navbar-container * {
+      display: block;
+  }
+  #nav-toggler:checked ~ .navbar-container .social-box {
+      display: flex;
+  }
+  #nav-toggler:checked ~ .navbar-container {
+    padding-top: 1rem;
+    height: auto;
+    opacity: 1;
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .header-img {
+    display: none;
+  }
+  .footer-row-last{
+      display: block;
+  }
+  #copyright{
+      margin-bottom: 1rem;
+  }
+}
